@@ -206,7 +206,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/odm/etc/charger/BAA_config_rodin.json:$(TARGET_COPY_OUT_ODM)/etc/charger/BAA_config_rodin.json \
     vendor/xiaomi/rodin/proprietary/odm/etc/cit_param_config.json:$(TARGET_COPY_OUT_ODM)/etc/cit_param_config.json \
     vendor/xiaomi/rodin/proprietary/odm/etc/cust_color.xml:$(TARGET_COPY_OUT_ODM)/etc/cust_color.xml \
-    vendor/xiaomi/rodin/proprietary/odm/etc/device_info_qr_config.yml:$(TARGET_COPY_OUT_ODM)/etc/device_info_qr_config.yml \
     vendor/xiaomi/rodin/proprietary/odm/etc/df_default.xml:$(TARGET_COPY_OUT_ODM)/etc/df_default.xml \
     vendor/xiaomi/rodin/proprietary/odm/etc/disp0/dsi_o10_36_02_0b_dsc_vdo/OD_Lut.bin:$(TARGET_COPY_OUT_ODM)/etc/disp0/dsi_o10_36_02_0b_dsc_vdo/OD_Lut.bin \
     vendor/xiaomi/rodin/proprietary/odm/etc/disp0/dsi_o10_36_02_0b_dsc_vdo/cct_pcc.txt:$(TARGET_COPY_OUT_ODM)/etc/disp0/dsi_o10_36_02_0b_dsc_vdo/cct_pcc.txt \
@@ -586,7 +585,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/etc/smartpa_param_fs/preset_voip.bin:$(TARGET_COPY_OUT_VENDOR)/etc/smartpa_param_fs/preset_voip.bin \
     vendor/xiaomi/rodin/proprietary/vendor/etc/special_pws_channel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/special_pws_channel.xml \
     vendor/xiaomi/rodin/proprietary/vendor/etc/spk_cal_silence.wav:$(TARGET_COPY_OUT_VENDOR)/etc/spk_cal_silence.wav \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal-map.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-map.conf \
     vendor/xiaomi/rodin/proprietary/vendor/etc/thermald-devices.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermald-devices.conf \
     vendor/xiaomi/rodin/proprietary/vendor/etc/usb_audio_accessory_only_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_accessory_only_policy_configuration.xml \
     vendor/xiaomi/rodin/proprietary/vendor/etc/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
