@@ -484,6 +484,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/etc/camera/mimotion_f5b.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mimotion_f5b.bin \
     vendor/xiaomi/rodin/proprietary/vendor/etc/camera/mimotion_f5w.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mimotion_f5w.bin \
     vendor/xiaomi/rodin/proprietary/vendor/etc/camera/mt6899/gma_custom.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mt6899/gma_custom.txt \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/dolby/dax-default-spatializer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default-spatializer.xml \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/dolby/dax-fs19xx-spatializer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-fs19xx-spatializer.xml \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/dolby/dax-fs19xx.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-fs19xx.xml \
     vendor/xiaomi/rodin/proprietary/vendor/etc/ecc_list.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list.xml \
     vendor/xiaomi/rodin/proprietary/vendor/etc/ecc_list_preference.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_preference.xml \
     vendor/xiaomi/rodin/proprietary/vendor/etc/elliptic_sensor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/elliptic_sensor.xml \
@@ -524,6 +528,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/arm.mali.platform-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/arm.mali.platform-mediatek.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/camerahalserver.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camerahalserver.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/chipinfo_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/chipinfo_init.rc \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/init/dms-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dms-service.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/fuelgauged_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_init.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/fuelgauged_nvram_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_nvram_init.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/gpuserv-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/gpuserv-default.rc \
@@ -544,6 +549,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/secure_element-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/secure_element-service.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/tee-supplicant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee-supplicant.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/touch_boost.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/touch_boost.rc \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/init/vendor.dolby.media.c2-default-service-dax.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2-default-service-dax.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/vendor.mediatek.hardware.mmagent-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mmagent-service.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/vendor.mediatek.hardware.mmlpq@V1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mmlpq@V1-service.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/vendor.mediatek.hardware.mms-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mms-service.rc \
@@ -553,6 +559,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/volte_clientapi_ua.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/volte_clientapi_ua.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/wlan_assistant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wlan_assistant.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/mali_platform.config:$(TARGET_COPY_OUT_VENDOR)/etc/mali_platform.config \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
     vendor/xiaomi/rodin/proprietary/vendor/etc/mpe.conf:$(TARGET_COPY_OUT_VENDOR)/etc/mpe.conf \
     vendor/xiaomi/rodin/proprietary/vendor/etc/nnapi_powerhal.json:$(TARGET_COPY_OUT_VENDOR)/etc/nnapi_powerhal.json \
     vendor/xiaomi/rodin/proprietary/vendor/etc/permissions/android.hardware.hardware_keystore.mitee.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.mitee.xml \
@@ -826,6 +833,9 @@ PRODUCT_PACKAGES += \
     libcodec2_mtk_c2store \
     libcodec2_mtk_vdec \
     libcodec2_mtk_venc \
+    libcodec2_soft_ac4dec \
+    libcodec2_soft_ddpdec \
+    libcodec2_store_dolby \
     libcodec2_vpp_AIMEMC_plugin \
     libcodec2_vpp_AISR_plugin \
     libcodec2_vpp_fa_plugin \
@@ -851,9 +861,14 @@ PRODUCT_PACKAGES += \
     libconnfem \
     libcustom_nvram \
     libcvsd_mtk \
+    libdapparamstorage \
+    libdeccfg \
     libdfintf \
     libdisplayfeature \
     libdisplayfeatureservice \
+    libdlbdsservice \
+    libdlbpreg \
+    libdmshal \
     libecoengine \
     libfeature.hdr10 \
     libfeaturepolicy \
@@ -1014,6 +1029,7 @@ PRODUCT_PACKAGES += \
     libsimlock \
     libsimmelock \
     libsn220u_fw \
+    libspatializerparamstorage \
     libspeech_enh_lib \
     libspeechparser_vendor \
     libstorage_otp \
@@ -1449,6 +1465,12 @@ PRODUCT_PACKAGES += \
     rodinsc820csultra_mipi_raw_4_tuning \
     rodinsc820csultra_mipi_raw_IdxMgr \
     rodinsc820csultra_mipi_raw_tuning \
+    libdlbvolaidl \
+    libswdapaidl \
+    libswgamedapaidl \
+    libswspatializeraidl \
+    vendor.dolby.dms-V1-ndk \
+    vendor.dolby.hardware.dms@2.0 \
     vendor.mediatek.hardware.apuware.apusys-V5-ndk-vendor \
     vendor.mediatek.hardware.apuware.utils-V1-ndk-vendor \
     vendor.mediatek.hardware.apuware.utils@2.0-vendor \
@@ -1747,6 +1769,7 @@ PRODUCT_PACKAGES += \
     android.hardware.tetheroffload-V1-service.xml \
     arm.mali.platform-mediatek.xml \
     bluetooth_audio_mtk.xml \
+    dms-service.xml \
     gnss-mtk-default.xml \
     gnss-mtk.xml \
     manifest_allocator.xml \
@@ -1760,6 +1783,7 @@ PRODUCT_PACKAGES += \
     manifest_mtkgpuserv.xml \
     manifest_uievent.xml \
     mapper.mediatek.xml \
+    vendor.dolby.media.c2-default-service-dax.xml \
     vendor.xiaomi.hardware.aidlbgservice-service.xml \
     vendor.xiaomi.hardware.displayfeature_aidl-service.xml \
     vendor.xiaomi.hardware.dynamiccameraserver.xml \
@@ -1792,6 +1816,8 @@ PRODUCT_PACKAGES += \
     camerahalserver \
     mtkfusionrild \
     tetheroffloadservice \
+    vendor.dolby.dms.service \
+    vendor.dolby.media.c2-default-service-dax \
     vendor.mediatek.hardware.gpuserv-service \
     vendor.mediatek.hardware.mmagent-service \
     vendor.mediatek.hardware.mmlpq@V1-service \
