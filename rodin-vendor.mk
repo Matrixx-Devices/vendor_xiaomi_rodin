@@ -1601,6 +1601,7 @@ PRODUCT_PACKAGES += \
     libneuron_graph_delegate.mtk \
     libneuronusdk_adapter.mtk \
     libnir_neon_driver_ndk.mtk \
+    libtfa98xx_cal \
     libtflite_mtk.mtk \
     vendor.mediatek.hardware.apuware.apusys-V5-ndk \
     vendor.mediatek.hardware.apuware.apusys@1.0 \
@@ -1843,7 +1844,17 @@ PRODUCT_PACKAGES += \
     wlan_assistant \
     wmt_launcher \
     wmt_loader \
+    climax_tfa9873 \
     android.hardware.audio.parameter_parser.service \
+    spkcal \
+    spkcal_88263s \
+    spkcal_88263s_m16 \
+    spkcal_88263s_m9 \
+    spkcal_88263s_n12 \
+    spkcal_88263s_n12a \
+    spkcal_88263s_o10 \
+    spkcal_p10 \
+    spkcal_tfa \
     fidoca_mitee \
     vendor.xiaomi.hw.touchfeature-service \
     vendor.xiaomi.sensor.citsensorservice.aidl \
